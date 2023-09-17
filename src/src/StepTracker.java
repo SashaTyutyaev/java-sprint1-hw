@@ -17,19 +17,19 @@ public class StepTracker {
         System.out.println("Введите номер месяца");
         int month = scanner.nextInt();
         if (month > 12 || month < 1){
-            System.out.println("Ошибка");
+            System.out.println("Неправильное номер месяца");
             return;
         }
         System.out.println("Введите номер дня");
         int day = scanner.nextInt();
         if (day > 30 || day < 1) {
-            System.out.println("Ошибка");
+            System.out.println("Неправильный номер дня");
             return;
         }
         System.out.println("Введите количество шагов");
         int steps = scanner.nextInt();
         if (steps <= 0) {
-            System.out.println("Ошибка");
+            System.out.println("Неправильное количество шагов");
             return;
         } else {
             System.out.println("Сохранено");
@@ -50,7 +50,8 @@ public class StepTracker {
         System.out.println("Введите номер месяца");
         int month = scanner.nextInt();
         if ( month < 0 || month > 12) {
-            System.out.println("Ошибка");
+            System.out.println("Неправильный номер месяца");
+            return;
         } else {
             System.out.println("Статистика за " + month + " месяц :");
         }
