@@ -49,7 +49,7 @@ public class StepTracker {
     void printStatistic() {
         System.out.println("Введите номер месяца");
         int month = scanner.nextInt();
-        if ( month < 0 || month > 12) {
+        if ( month < 1 || month > 12) {
             System.out.println("Неправильный номер месяца");
             return;
         } else {
@@ -64,6 +64,7 @@ public class StepTracker {
         int sumKm = converter.convertToKm(sumSteps);
         System.out.println("За этот месяц вы прошли " + sumKm + " километров.");
         int sumCal = converter.convertStepsToKilocalories(sumSteps);
+        System.out.println("За этот месяц в среднем вы проходили " + (sumSteps / 30 ) + " шагов.");
         System.out.println("За этот месяц вы сожгли " + sumCal + " килокалорий.");
         int bestSeries = monthData.bestSeries(goalByStepsPerDay);
         System.out.println("Ваша лучшая серия за месяц: " + bestSeries);
